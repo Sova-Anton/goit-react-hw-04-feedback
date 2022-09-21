@@ -1,4 +1,6 @@
-export default function Statistics({good, neutral, bad, total, percentage }) {
+import PropTypes from 'prop-types';
+
+export default function Statistics({ good, neutral, bad, total, percentage }) {
     return (
         <ul>
              <li>Good: {good}</li>
@@ -8,4 +10,12 @@ export default function Statistics({good, neutral, bad, total, percentage }) {
             <li>Positive feedback: {percentage} %</li>
         </ul>
     )
+}
+
+Statistics.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    percentage: PropTypes.number.isRequired
 }

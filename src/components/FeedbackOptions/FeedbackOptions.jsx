@@ -1,4 +1,6 @@
-export default function FeedbackOptions({handleButton} ) {
+import PropTypes from 'prop-types';
+
+export default function FeedbackOptions({ handleButton }) {
     return (
         <>
              <button type="button" onClick={() => handleButton('good')}>
@@ -12,4 +14,8 @@ export default function FeedbackOptions({handleButton} ) {
           </button>
         </>
     )
+}
+
+FeedbackOptions.propTypes = {
+  handleButton: PropTypes.func.isRequired,
 }
